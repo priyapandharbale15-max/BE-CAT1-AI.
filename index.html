@@ -11,7 +11,7 @@
 input[type=text],textarea,select{width:100%;padding:11px;border:1px solid #ccd5e0;border-radius:8px;margin:7px 0 12px;font-size:15px}
 button{border:0;border-radius:8px;padding:11px 17px;font-weight:700;cursor:pointer}.primary{background:#173f7a;color:white}.secondary{background:#e8edf5}.success{background:#087f5b;color:#fff}.danger{background:#b42318;color:#fff}
 .tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px;position:sticky;top:0;z-index:5;background:#f3f6fb;padding:8px 0}.tab{background:#fff;border:1px solid #ccd5e0}.tab.active{background:#173f7a;color:#fff}
-.activity{display:none}.activity.active{display:block}.inst{background:#eef5ff;border-left:5px solid #285da8;padding:12px 15px;border-radius:8px;margin:12px 0 18px}
+.hide{display:none!important}.activity{display:none}.activity.active{display:block}.inst{background:#eef5ff;border-left:5px solid #285da8;padding:12px 15px;border-radius:8px;margin:12px 0 18px}
 .qrow{padding:15px 0;border-bottom:1px solid #e5e9ef}.qnum{font-weight:700}.scenario{margin:7px 0 11px;line-height:1.5}
 .opts{display:flex;gap:8px;flex-wrap:wrap}.option{border:1px solid #ccd5e0;border-radius:8px;padding:9px 13px;cursor:pointer;background:#fff}.option input{margin-right:6px}
 .progress{height:9px;background:#ddd;border-radius:10px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;background:#285da8;width:0}
@@ -21,7 +21,7 @@ button{border:0;border-radius:8px;padding:11px 17px;font-weight:700;cursor:point
 .resultbox{background:#f8fafc;border-radius:10px;padding:15px;margin:10px 0}.answerkey{display:none}
 footer{text-align:center;color:#667085;font-size:13px;padding:20px}
 @media(max-width:700px){.header h1{font-size:21px}.card{padding:15px}.opts{display:block}.option{margin:7px 0}.topbar{display:block}.topbar button{margin-top:8px}}
-@media print{.header,.tabs,#start,.actions,footer{display:none}.card{box-shadow:none}.activity{display:none}.activity.active{display:block}}
+@media print{.header,.tabs,#start,.actions,footer{display:none}.card{box-shadow:none}.hide{display:none!important}.activity{display:none}.activity.active{display:block}}
 </style>
 </head>
 <body>
@@ -173,7 +173,7 @@ function submitAll(){
    answers.activity4[i]={x:document.getElementById("activity4_"+i+"_x").value.trim(),y:document.getElementById("activity4_"+i+"_y").value.trim()};
  });
  answers.activity5={
-   tp:a5_tp.value.trim(),tn:a5_tn.value.trim(),fp:a5_fp.value.trim(),fn:a5_fn.value.trim(),acc:a5_acc.value.trim(),reason:a5_reason.value.trim()
+   tp:document.getElementById("a5_tp").value.trim(),tn:document.getElementById("a5_tn").value.trim(),fp:document.getElementById("a5_fp").value.trim(),fn:document.getElementById("a5_fn").value.trim(),acc:document.getElementById("a5_acc").value.trim(),reason:document.getElementById("a5_reason").value.trim()
  };
  const scores=calculateScores();
  document.getElementById("work").classList.add("hide");
