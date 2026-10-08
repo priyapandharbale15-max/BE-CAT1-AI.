@@ -1,60 +1,208 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI, ML & Generative AI Exam</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI, ML & Generative AI — Activities 1–9</title>
 <style>
-body{font-family:Arial;margin:0;background:#f3f6fb;color:#182230}.head{background:#173f7a;color:white;text-align:center;padding:22px}.wrap{max-width:900px;margin:20px auto;padding:15px}.card{background:white;padding:22px;border-radius:14px;box-shadow:0 3px 15px #0001;margin-bottom:18px}input{padding:11px;width:95%;margin:7px 0 14px;border:1px solid #ccd5e0;border-radius:7px}button{padding:11px 17px;border:0;border-radius:8px;font-weight:bold;cursor:pointer}.primary{background:#173f7a;color:white}.gray{background:#e8edf5}.red{background:#b42318;color:white}.timer{color:#b42318;font-size:20px;font-weight:bold}.bar{display:flex;justify-content:space-between;position:sticky;top:0;background:white;padding:12px;border-radius:10px;box-shadow:0 2px 10px #0002;z-index:3}.prog{height:8px;background:#ddd;border-radius:8px;margin-top:7px}.prog i{display:block;height:100%;background:#285da8;width:0}.q{font-size:20px;font-weight:bold;line-height:1.45}.opt{display:block;border:1px solid #d3dae5;padding:13px;margin:10px 0;border-radius:8px;cursor:pointer}.opt input{width:auto;margin:0 8px 0 0}.nav{display:flex;justify-content:space-between;margin-top:20px}.hide{display:none}.score{font-size:48px;font-weight:bold;color:#173f7a;text-align:center}.pass{color:#087f5b}.fail{color:#b42318}.cert{border:7px double #173f7a;text-align:center;padding:35px;margin-top:20px;background:#fffdf5}.cert .name{font-size:30px;font-weight:bold}.review{margin-top:20px}.ri{padding:12px;border-left:5px solid #999;background:#f8fafc;margin:8px 0}.ok{border-color:#087f5b}.bad{border-color:#b42318}@media(max-width:600px){.q{font-size:18px}.nav{gap:8px}.nav button{flex:1}}
-@media print{.head,#start,#exam,.review,#result>h2,#result>p,.actions{display:none!important}.cert{display:block!important;box-shadow:none}}
-</style></head><body>
-<div class="head"><h1>AI, ML & Generative AI Online Examination</h1><div>30 MCQs • 30 Marks • 30 Minutes</div></div>
+*{box-sizing:border-box}body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f3f6fb;color:#182230}
+.header{background:#173f7a;color:#fff;padding:20px;text-align:center}.header h1{margin:0 0 6px;font-size:27px}.header p{margin:0}
+.wrap{max-width:1100px;margin:20px auto;padding:0 14px}.card{background:#fff;border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 3px 16px #0001}
+input[type=text],textarea,select{width:100%;padding:11px;border:1px solid #ccd5e0;border-radius:8px;margin:7px 0 12px;font-size:15px}
+button{border:0;border-radius:8px;padding:11px 17px;font-weight:700;cursor:pointer}.primary{background:#173f7a;color:white}.secondary{background:#e8edf5}.success{background:#087f5b;color:#fff}.danger{background:#b42318;color:#fff}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px;position:sticky;top:0;z-index:5;background:#f3f6fb;padding:8px 0}.tab{background:#fff;border:1px solid #ccd5e0}.tab.active{background:#173f7a;color:#fff}
+.activity{display:none}.activity.active{display:block}.inst{background:#eef5ff;border-left:5px solid #285da8;padding:12px 15px;border-radius:8px;margin:12px 0 18px}
+.qrow{padding:15px 0;border-bottom:1px solid #e5e9ef}.qnum{font-weight:700}.scenario{margin:7px 0 11px;line-height:1.5}
+.opts{display:flex;gap:8px;flex-wrap:wrap}.option{border:1px solid #ccd5e0;border-radius:8px;padding:9px 13px;cursor:pointer;background:#fff}.option input{margin-right:6px}
+.progress{height:9px;background:#ddd;border-radius:10px;overflow:hidden;margin:8px 0}.progress i{display:block;height:100%;background:#285da8;width:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.score{font-size:38px;font-weight:800;color:#173f7a;text-align:center}.pass{color:#087f5b}.small{font-size:13px;color:#667085}
+.matrix{border-collapse:collapse;margin:15px auto;width:min(500px,100%)}.matrix th,.matrix td{border:1px solid #8d99a8;padding:10px;text-align:center}.matrix th{background:#eef2f7}
+.resultbox{background:#f8fafc;border-radius:10px;padding:15px;margin:10px 0}.answerkey{display:none}
+footer{text-align:center;color:#667085;font-size:13px;padding:20px}
+@media(max-width:700px){.header h1{font-size:21px}.card{padding:15px}.opts{display:block}.option{margin:7px 0}.topbar{display:block}.topbar button{margin-top:8px}}
+@media print{.header,.tabs,#start,.actions,footer{display:none}.card{box-shadow:none}.activity{display:none}.activity.active{display:block}}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Sanjay Ghodawat Institute</h1>
+<p>AI, ML & Generative AI — Student Activity Portal</p>
+<p style="font-size:14px;margin-top:5px">Activities 1–9 • Interactive Online Submission</p>
+</div>
+
 <div class="wrap">
-<section id="start" class="card"><h2>Student Details</h2>
-<label>Student Name<br><input id="name" placeholder="Enter full name"></label>
-<label>Roll / PRN No.<br><input id="roll" placeholder="Enter roll / PRN"></label>
-<h3>Instructions</h3><ul><li>30 multiple-choice questions, 1 mark each.</li><li>Time limit: 30 minutes; the exam auto-submits when time ends.</li><li>Select one best answer. You may use Previous/Next.</li><li>Questions and options are randomized.</li><li>Passing score: 50%.</li><li>Passing students receive a printable certificate.</li></ul>
-<button class="primary" onclick="start()">Start Examination</button></section>
-<section id="exam" class="hide"><div class="bar"><div><b id="cnt"></b><div class="prog"><i id="pg"></i></div></div><div class="timer" id="tm">30:00</div></div><div class="card"><div id="q" class="q"></div><div id="ops"></div><div class="nav"><button class="gray" onclick="prev()">← Previous</button><button class="gray" id="next" onclick="next()">Next →</button><button class="red hide" id="sub" onclick="finish(true)">Submit Exam</button></div></div></section>
-<section id="result" class="card hide"><h2 style="text-align:center">Examination Result</h2><p id="who" style="text-align:center"></p><div id="score" class="score"></div><h2 id="stat" style="text-align:center"></h2><p id="msg" style="text-align:center"></p>
-<div id="cert" class="cert hide"><div>Certificate of Completion</div><h2>AI, ML & Generative AI</h2><p>This certificate is proudly presented to</p><div id="cname" class="name"></div><p>for successfully completing the online examination with</p><h2 id="cscore"></h2><p><b>Roll / PRN:</b> <span id="croll"></span></p><p><b>Certificate ID:</b> <span id="cid"></span></p><p><b>Date:</b> <span id="cdate"></span></p></div>
-<div class="actions" style="text-align:center;margin:18px"><button class="primary" onclick="print()">Print / Save Certificate as PDF</button> <button class="gray" onclick="location.reload()">New Attempt</button></div>
-<div class="review"><h3>Answer Review</h3><div id="review"></div></div></section></div>
+<section id="start" class="card">
+<h2>Student Details</h2>
+<label>Student Name<input type="text" id="studentName" placeholder="Enter full name"></label>
+<label>Roll / PRN No.<input type="text" id="rollNo" placeholder="Enter Roll / PRN"></label>
+<div class="inst"><b>Instructions:</b> Complete Activities 1–9. Read each scenario carefully and select/enter the most appropriate answer. Your answers remain in this browser until you submit.</div>
+<button class="primary" onclick="begin()">Start Activities</button>
+</section>
+
+<section id="work" class="hide">
+<div class="topbar card">
+<div><b id="studentLabel"></b><div class="small">Complete all nine activities and click Submit.</div></div>
+<div><span id="overallProgress">0%</span> complete</div>
+</div>
+
+<div class="tabs" id="tabs"></div>
+<div id="activityContainer"></div>
+
+<div class="card actions">
+<button class="primary" onclick="submitAll()">Submit All Activities</button>
+<button class="secondary" onclick="saveProgress()">Save Progress in Browser</button>
+<button class="secondary" onclick="window.print()">Print / Save</button>
+</div>
+</section>
+
+<section id="result" class="card hide">
+<h2 style="text-align:center">Activity Submission Result</h2>
+<p id="resultWho" style="text-align:center"></p>
+<div class="score" id="score"></div>
+<p style="text-align:center" id="resultMsg"></p>
+<div id="activityScores"></div>
+<div class="resultbox"><b>Important:</b> Activities containing free-text responses (especially Activity 4) are recorded for student submission. The teacher can review those responses manually.</div>
+<div style="text-align:center"><button class="primary" onclick="window.print()">Print / Save Result</button> <button class="secondary" onclick="location.reload()">New Submission</button></div>
+</section>
+</div>
+<footer>AI, ML & Generative AI Student Activities • Static GitHub Pages website</footer>
+
 <script>
-const bank=[
-["An app predicts tomorrow’s electricity demand using past usage data. Which approach is most appropriate?",["Rule-based programming","Machine Learning","Fixed lookup table","Manual calculation"],1],
-["A system blocks an ATM card after exactly three incorrect PIN attempts. This is primarily:",["Rule-based programming","Unsupervised learning","Generative AI","Regression"],0],
-["A smart thermostat learns a user's preferences and adjusts temperature automatically. The best description is:",["Only a fixed rule","Learning-based intelligent automation","A database query","A compiler"],1],
-["A microcontroller turns ON a fan whenever temperature exceeds 40°C. This is:",["Rule-based control","Supervised learning","Clustering","Generative AI"],0],
-["A machine vision system detects defective products from examples of good and defective products. This is mainly:",["Supervised learning","Fixed sorting rule only","Time-series forecasting","Database normalization"],0],
-["A GPS delivery system automatically reroutes a vehicle when roads are closed. Which AI capability is evident?",["Interacting with the environment","Only data storage","Only arithmetic","Label encoding"],0],
-["In supervised learning, labeled data is commonly represented as:",["Input X and output Y pairs","Only unlabeled X","Only output Y","Random text"],0],
-["A model is trained using sensor measurements and corresponding machine-fault categories. The fault category is the:",["Feature X","Label Y","Hyperparameter","Distance metric"],1],
-["Which is a feature for a battery-health classification model?",["Healthy/degraded/end-of-life","Charge cycles, voltage drop and temperature","Final predicted class","Accuracy"],1],
-["A model predicts 'safe, warning, critical' from strain, vibration, crack length, temperature and load. This is:",["Classification","Regression","Clustering only","Compression"],0],
-["Estimating remaining useful life in hours of a machine is generally:",["Regression","Classification","Clustering","Association rules"],0],
-["Categorizing traffic as free flow, moderate congestion, or heavy congestion is:",["Classification","Regression","Time-series forecasting by definition","Dimensionality reduction"],0],
-["Predicting motor efficiency as a continuous numerical value is:",["Regression","Classification","Clustering","Rule mining"],0],
-["Forecasting daily solar power generation using historical observations collected over consecutive days is:",["Time-series forecasting","Simple rule-based control","Image classification","Clustering"],0],
-["What makes a problem a time-series forecasting problem?",["The order/time of observations matters","There are always text labels","There are no inputs","Output must be categorical"],0],
-["Which is regression rather than time-series forecasting?",["Predict tensile strength from composition and heat-treatment temperature","Forecast hourly traffic volume","Forecast daily power generation","Forecast monthly water demand from past values"],0],
-["Unsupervised learning is used when:",["No labeled output is available","Every input has a known class label","The answer is fixed by an IF statement","Only text is present"],0],
-["Clustering attempts to:",["Group similar data points automatically","Predict a known label from labeled examples","Calculate a fixed tax rate","Generate a certificate"],0],
-["Grouping farmland regions by similar soil moisture, pH and nutrients without predefined labels is:",["Clustering","Classification","Regression","Rule-based control"],0],
-["Using labeled thermal images to identify overheating electrical panels is:",["Classification","Clustering","Unsupervised grouping","Rule-only automation"],0],
-["A system discovers unknown mission states from spacecraft telemetry without predefined labels. This is:",["Clustering","Classification","Regression","Prompt engineering"],0],
-["A machine normally draws 8–10 A but suddenly draws 18 A during steady operation. This behavior is:",["Anomaly","Normal seasonal variation","A label","Feature selection"],0],
-["A smart meter shows a predictable daily electricity peak. This is:",["Expected behavior, not necessarily an anomaly","Always an anomaly","A false negative","A classification label"],0],
-["A confusion matrix has actual/predicted: Healthy/Healthy=170, Healthy/Fault=10, Fault/Healthy=5, Fault/Fault=15. What is TP?",["15","170","10","5"],0],
-["For that same confusion matrix, what is the accuracy?",["92.5%","85%","90%","95%"],0],
-["In a fault-detection system, a false negative means:",["A fault occurred but the model predicted healthy","Healthy was predicted as fault","Fault was predicted as fault","Healthy was predicted as healthy"],0],
-["Why can high accuracy still be unsafe in fault detection?",["Different errors have different consequences","Accuracy is never useful","All models must have zero errors","Training data is always unlabeled"],0],
-["Prompt engineering mainly concerns:",["Giving an LLM effective instructions and context","Changing CPU hardware","Replacing all training data","Creating database indexes"],0],
-["RAG is especially useful when an AI assistant must:",["Answer using information retrieved from a specific document collection","Control a motor using only a threshold","Cluster unlabeled pixels only","Calculate a fixed interest rate"],0],
-["A generative AI system gives a confident but unsupported answer. This is commonly called:",["Hallucination","Clustering","Normalization","Cross-validation"],0]
-];
-let qs=[],ans=[],i=0,sec=1800,timer,done=false;
-function sh(a){a=[...a];for(let j=a.length-1;j>0;j--){let k=Math.floor(Math.random()*(j+1));[a[j],a[k]]=[a[k],a[j]]}return a}
-function start(){let n=name.value.trim(),r=roll.value.trim();if(!n||!r){alert("Please enter Student Name and Roll / PRN.");return}qs=sh(bank).map(x=>{let o=sh(x[1]);return{q:x[0],o:o,a:o.indexOf(x[1][x[2]])}});ans=Array(30).fill(null);i=0;sec=1800;start.classList.add("hide");exam.classList.remove("hide");show();timer=setInterval(tick,1000)}
-function tick(){let m=Math.floor(sec/60),s=sec%60;tm.textContent=String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");if(sec--<=0)finish(false)}
-function show(){let x=qs[i];cnt.textContent=`Question ${i+1} of 30`;pg.style.width=((i+1)/30*100)+"%";q.textContent=`Q${i+1}. ${x.q}`;ops.innerHTML="";x.o.forEach((v,j)=>{let l=document.createElement("label");l.className="opt";l.innerHTML=`<input type="radio" name="a" value="${j}" ${ans[i]===j?"checked":""}> ${String.fromCharCode(65+j)}. ${v}`;ops.appendChild(l)});next.classList.toggle("hide",i===29);sub.classList.toggle("hide",i!==29)}
-function save(){let x=document.querySelector('input[name="a"]:checked');if(x)ans[i]=+x.value}
-function next(){save();if(i<29){i++;show()}}function prev(){save();if(i>0){i--;show()}}
-function finish(confirmIt){save();if(confirmIt&&!confirm("Submit now? You cannot change answers after submission."))return;done=true;clearInterval(timer);exam.classList.add("hide");result.classList.remove("hide");let sc=qs.reduce((n,x,j)=>n+(ans[j]===x.a),0),pct=sc/30*100,nm=name.value.trim(),ro=roll.value.trim();who.innerHTML=`<b>${esc(nm)}</b> | Roll/PRN: <b>${esc(ro)}</b>`;score.textContent=`${sc} / 30 (${pct.toFixed(1)}%)`;stat.textContent=pct>=50?"PASSED":"NOT PASSED";stat.className=pct>=50?"pass":"fail";msg.textContent=pct>=50?"Congratulations! You successfully completed the examination.":"Review the concepts and try again.";if(pct>=50){cert.classList.remove("hide");cname.textContent=nm;cscore.textContent=`${sc}/30 (${pct.toFixed(1)}%)`;croll.textContent=ro;cid.textContent="AIML-"+Date.now().toString().slice(-8);cdate.textContent=new Date().toLocaleDateString("en-IN",{day:"2-digit",month:"long",year:"numeric"})}review.innerHTML="";qs.forEach((x,j)=>{let d=document.createElement("div");d.className="ri "+(ans[j]===x.a?"ok":"bad");d.innerHTML=`<b>Q${j+1}. ${esc(x.q)}</b><br>Your answer: ${ans[j]==null?"Not answered":esc(x.o[ans[j]])}<br>Correct answer: <b>${esc(x.o[x.a])}</b>`;review.appendChild(d)})}
-function esc(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-</script></body></html>
+const DATA = {"activity1": {"title": "Activity 1: How would you build it?", "instructions": "Choose the best approach: RB = Rule-based traditional programming, ML = Machine Learning (learns from data), AI = Artificial Intelligence (learns + reasons + acts).", "questions": [["An app predicts tomorrow’s electricity demand based on past usage data", "ML"], ["A system blocks ATM card after 3 incorrect PIN attempts", "RB"], ["A smart thermostat learns user preferences and adjusts room temperature automatically", "AI"], ["A microcontroller turns ON a fan when temperature exceeds 40°C", "RB"], ["A machine vision system detects defective products on a conveyor belt", "ML"], ["A GPS-based system automatically reroutes a delivery vehicle during road closures", "AI"], ["Marks are normalized and grouped into grade categories based on fixed mark ranges", "RB"], ["A system calculates interest on savings accounts using fixed rates", "RB"], ["An elevator moves according to floor selection logic", "RB"], ["A traffic monitoring system predicts accident-prone zones using historical data", "ML"], ["A robot arm picks and places objects based on sensor input and task goals", "AI"], ["A banking system flags suspicious transactions as potential fraud", "ML"], ["A washing machine follows a wash cycle selected by the user", "RB"], ["A voice assistant understands spoken commands and performs actions", "AI"], ["A vending machine dispenses items when exact payment is received", "RB"]]}, "activity2": {"title": "Activity 2: Upgrade or overkill?", "instructions": "Choose A, B, or C. A = remain rule-based only; B = needs learning; C = needs intelligence. Focus on what is technically required.", "questions": [["A validation tool checks whether passwords meet fixed rules (length, symbols, numbers).", "A"], ["A filter learns to classify emails based on previously labeled spam and non-spam messages.", "B"], ["An autonomous drone plans a safe route while avoiding obstacles & adapting to wind conditions.", "C"], ["A handwriting recognition system improves accuracy as it is trained on more samples.", "B"], ["A control system decides which elevator should serve each request to minimize waiting time.", "C"], ["A fuel level indicator in a vehicle that shows fuel quantity based on sensor readings.", "A"], ["A predictive maintenance system learns failure patterns from historical machine sensor data.", "B"], ["A self-driving car decides when to stop, turn, or overtake based on traffic conditions.", "C"], ["A demand forecasting system predicts future electricity consumption using past usage data.", "B"], ["An emergency stop button that immediately cuts power to industrial machinery.", "A"], ["A disaster response robot chooses between multiple rescue paths under uncertain conditions.", "C"], ["A tank overflow protection system opens a valve when water level exceeds a preset limit.", "A"], ["An automatic streetlight turns ON at sunset and OFF at sunrise using a light sensor threshold.", "A"], ["A temperature control system switches a heater ON below 18°C and OFF above 22°C.", "A"], ["A traffic violation camera captures an image when a vehicle crosses a stop line on red signal.", "A"]]}, "activity3": {"title": "Activity 3: AI Capability Mapping", "instructions": "Choose the most appropriate capability: A Reasoning, B Learning, C Problem-solving, D Perception, E Natural Language Understanding, F Interacting with the Environment.", "questions": [["A banking system flags a loan application as risky because it violates multiple eligibility criteria.", "A"], ["A network monitoring system explains which server is causing a system outage.", "A"], ["A recommendation system improves movie suggestions using user ratings and watch history.", "B"], ["A traffic signal system learns peak-hour congestion patterns over several months.", "B"], ["A scheduling system allocates machines and workers to reduce production delays.", "C"], ["A power system solves load-balancing issues during high demand periods.", "C"], ["A machine vision system identifies faulty products on a conveyor belt.", "D"], ["A security camera system detects unauthorized entry by analyzing video feeds.", "D"], ["A speech system recognizes spoken words from audio signals.", "D"], ["A drone uses vision to avoid obstacles during site inspection.", "D"], ["A chatbot understands customer complaints written in plain English.", "E"], ["A warehouse robot moves shelves based on real-time inventory needs.", "F"], ["A smart thermostat adjusts room temperature based on occupancy sensors.", "F"], ["An AI-controlled traffic signal changes lights based on vehicle flow.", "F"], ["A system extracts important details from project reports.", "E"]]}, "activity4": {"title": "Activity 4: Feature–Label Identification", "instructions": "For each scenario, enter Features (X) — inputs used by the model — and Label (Y) — output to be predicted. For items 13–14, propose a sensible X and Y for the stated monitoring application. Item 15 asks you to identify a mismatch.", "text_questions": [["A structural health monitoring system uses strain gauge readings, vibration frequency, crack length, temperature, and load weight to recognize bridge conditions as safe, warning, and critical.", ["strain gauge readings", "vibration frequency", "crack length", "temperature", "load weight"], ["safe", "warning", "critical"]], ["Transmission line operating conditions are categorized as no fault, line-to-ground, line-to-line, and three-phase fault using voltage/current magnitude, phase angle difference, and frequency deviation.", ["voltage/current magnitude", "phase angle difference", "frequency deviation"], ["no fault", "line-to-ground", "line-to-line", "three-phase fault"]], ["A battery diagnostics system analyzes charge cycles, voltage drop, internal resistance, temperature, and discharge rate to categorize lithium-ion battery health as healthy, degraded, or end-of-life.", ["charge cycles", "voltage drop", "internal resistance", "temperature", "discharge rate"], ["healthy", "degraded", "end-of-life"]], ["A wireless communication system uses SNR, bit error rate, modulation type, and channel bandwidth to grade signal quality as excellent, good, or poor.", ["SNR", "bit error rate", "modulation type", "channel bandwidth"], ["excellent", "good", "poor"]], ["A software analytics model analyzes cyclomatic complexity, lines of code, code churn, and number of past defects to group software modules as low risk, medium risk, or high risk.", ["cyclomatic complexity", "lines of code", "code churn", "number of past defects"], ["low risk", "medium risk", "high risk"]], ["Bearing operating conditions are classified as healthy, inner/outer race fault, and ball defect using vibration spectrum features, kurtosis, RMS value, and rotational speed.", ["vibration spectrum features", "kurtosis", "RMS value", "rotational speed"], ["healthy", "inner/outer race fault", "ball defect"]], ["Power quality conditions are classified as normal, sag, swell, or harmonic distortion using voltage waveform characteristics, THD, frequency variation, and load imbalance.", ["voltage waveform characteristics", "THD", "frequency variation", "load imbalance"], ["normal", "sag", "swell", "harmonic distortion"]], ["Corrosion severity is determined as no corrosion, mild corrosion, or severe corrosion using alloy composition, humidity level, pH value, temperature, and exposure time.", ["alloy composition", "humidity level", "pH value", "temperature", "exposure time"], ["no corrosion", "mild corrosion", "severe corrosion"]], ["A satellite imaging system uses spectral band intensities, NDVI, texture metrics, and spatial resolution to categorize land cover as urban, forest, water, or agriculture.", ["spectral band intensities", "NDVI", "texture metrics", "spatial resolution"], ["urban", "forest", "water", "agriculture"]], ["EEG signal states are labelled normal, pre-seizure, and seizure using frequency band power, signal entropy, amplitude variance, and wavelet coefficients.", ["frequency band power", "signal entropy", "amplitude variance", "wavelet coefficients"], ["normal", "pre-seizure", "seizure"]], ["A traffic engineering system uses traffic dynamics, flow and temporal context to label road conditions as free flow, moderate congestion, or heavy congestion.", ["traffic dynamics", "flow", "temporal context"], ["free flow", "moderate congestion", "heavy congestion"]], ["Weld quality is classified using weld width, penetration depth, thermal image patterns, and texture features.", ["weld width", "penetration depth", "thermal image patterns", "texture features"], ["good weld", "porosity defect", "crack defect"]], ["Oil and gas pipeline monitoring system — propose suitable features and a label for a supervised learning application.", [], []], ["HVAC monitoring system — propose suitable features and a label for a supervised learning application.", [], []], ["Identify the application for these X/Y pairs and check mismatch: Features (X): pedestrian, vehicle, or cyclist. Label (Y): LiDAR point density, bounding box size, radar velocity.", ["pedestrian, vehicle, cyclist"], ["LiDAR point density, bounding box size, radar velocity"]]]}, "activity5": {"title": "Activity 5: From Confusion to Conclusion", "instructions": "Use the confusion matrix to identify TP, TN, FP, FN and calculate accuracy. Then answer the engineering interpretation questions.", "matrix": [170, 10, 5, 15]}, "activity6": {"title": "Activity 6: Classification or Regression?", "instructions": "Choose C = Classification (categorical output) or R = Regression (continuous output).", "questions": [["Estimate the remaining useful life (in hours) of a rotating machine using vibration amplitude, temperature, rotational speed, and load.", "R"], ["Categorize traffic conditions as free flow, moderate congestion, or heavy congestion using vehicle count, average speed, and lane occupancy.", "C"], ["Group manufactured components as acceptable or defective using dimensional measurements and surface texture features.", "C"], ["Identify a transmission line condition as normal, line-to-ground fault, line-to-line fault, or three-phase fault using voltage and current measurements.", "C"], ["Estimate motor efficiency using voltage, current, speed, and load torque.", "R"], ["Recognize building damage levels as minor, moderate, or severe based on accelerometer data and displacement measurements.", "C"], ["Estimate heat transfer rate in a heat exchanger using fluid temperature, flow rate, and surface area.", "R"], ["Categorize customer consumption behavior as low usage, medium usage, or high usage based on smart meter data.", "C"], ["Predict power output from a wind turbine using wind speed, air density, and blade pitch angle.", "R"], ["Predict corrosion depth based on exposure time, humidity, temperature, and pH level.", "R"], ["Determine robot joint status as normal, misaligned, or stalled using torque, angle deviation, and vibration signals.", "C"], ["Predict concrete compressive strength using cement content, water–cement ratio, curing time, and aggregate properties.", "R"], ["Identify weld quality as good weld, porosity defect, or crack defect using geometric and thermal image features.", "C"], ["Predict the surface roughness value of a machined part using cutting speed, feed rate, depth of cut, and tool wear.", "R"], ["Estimate hourly electricity demand using historical load, temperature, humidity, and time-of-day information.", "R"]]}, "activity7": {"title": "Activity 7: Regression or Time Series Forecasting?", "instructions": "Choose Regression = how output changes with inputs, or TSF = how values change over time.", "questions": [["Predict the tensile strength of a metal alloy by analyzing its chemical composition percentages and applied heat treatment temperature.", "R"], ["Forecast the daily power generation of a solar power plant using historical solar irradiance data collected over consecutive days.", "TSF"], ["Estimate the fuel consumption of an internal combustion engine based on engine speed, applied load, and air–fuel ratio under different operating conditions.", "R"], ["Predict the monthly water demand of a city by analyzing past consumption values recorded in chronological order, considering seasonal variations and usage patterns.", "TSF"], ["Estimate the pressure drop across a pipeline using measured flow rate, pipe diameter, and fluid viscosity.", "R"], ["Forecast future stock prices by analyzing past market data observed over time.", "TSF"], ["Forecast hourly traffic volume using traffic data collected at regular time intervals.", "TSF"], ["Predict crop yield using soil nutrients (NPK), rainfall level, and fertilizer application.", "R"], ["Forecast crop yield using satellite time-series NDVI data collected over growing seasons.", "TSF"], ["Predict the hourly indoor temperature of a smart building using past temperature readings recorded at regular time intervals.", "TSF"], ["Predict drug solubility using molecular descriptors and chemical properties.", "R"], ["Predict drug dosage requirement using patient weight, age, and kidney function indicators.", "R"], ["Predict blood glucose trends using continuous glucose monitor (CGM) data recorded over time.", "TSF"], ["Forecast daily air pollution concentration levels using pollutant measurements observed over successive days.", "TSF"], ["Estimate the amount of heat generated in an electronic component using current, voltage, and resistance values.", "R"]]}, "activity8": {"title": "Activity 8: Clustering or Classification?", "instructions": "Choose Clustering (Unsupervised Learning) or Classification (Supervised Learning), based on labels and the goal.", "questions": [["Telemetry data from a spacecraft is analyzed to discover unknown mission states.", "Clustering"], ["A robot is trained using speech commands to identify & execute predefined actions.", "Classification"], ["Tablet manufacturing data includes press force, press speed, and powder flow measurements that are analyzed to identify compaction behavior patterns.", "Clustering"], ["Images are analyzed to group similar tumor patterns without prior diagnosis labels.", "Clustering"], ["Labeled thermal images are used to identify overheating electrical panels in substations.", "Classification"], ["Air quality data across locations is used to group areas with different pollution patterns.", "Clustering"], ["Data from harvesters, soil sensors, and weather stations is used to discover crop yield variability patterns.", "Clustering"], ["A maintenance system uses historical datasets with failure information to classify components as safe to operate or close to failure.", "Classification"], ["Soil sensor data (moisture, pH, nutrient levels) is analyzed to group farmland regions based on similar soil conditions without predefined labels.", "Clustering"], ["Satellite imagery is analyzed to group agricultural land into zones based on vegetation health and growth patterns.", "Clustering"], ["An autonomous vehicle recognizes dry roads, wet roads, and icy surfaces.", "Classification"], ["Concrete curing behavior is analyzed using ambient temperature, humidity, and hydration profiles across construction sites.", "Clustering"], ["A power distribution company analyzes smart meter datasets to group users based on daily and seasonal electricity usage patterns.", "Clustering"], ["Current harmonics and switching patterns of VFDs are analyzed to identify different drive operation modes.", "Clustering"], ["A bioreactor measures pH, dissolved oxygen, temperature, and agitation speed and identifies typical operating regimes.", "Clustering"]]}, "activity9": {"title": "Activity 9: Anomaly Detective", "instructions": "Choose Yes if behavior is unusual/unexpected/inconsistent with normal operation; choose No if it is expected or explainable.", "questions": [["A machine normally draws 8–10 A but suddenly draws 18 A during steady operation.", "Yes"], ["Bridge traffic load measurements increase during morning and evening rush hours and return to baseline during off-peak periods.", "No"], ["A motor shows a sudden spike in vibration without any change in load.", "Yes"], ["Temperature in a furnace gradually increases during the startup phase.", "No"], ["A robot arm deviates from its programmed trajectory without any change in input.", "Yes"], ["EV charging station reports unusual energy consumption during low usage hours.", "Yes"], ["A sudden acoustic emission burst occurs in a pump operating at constant speed.", "Yes"], ["Smart meter data shows a predictable daily peak in electricity usage.", "No"], ["Structural strain readings shift suddenly without any corresponding load change.", "Yes"], ["Network traffic shows a rare packet pattern never observed in historical logs.", "Yes"], ["Battery temperature rises slightly during fast charging and stabilizes afterward.", "No"], ["A production line camera detects a defect pattern that has not appeared before.", "Yes"], ["Wind turbine power output drops sharply while wind speed remains constant.", "Yes"], ["Pharmaceutical mixing torque shows a gradual increase as viscosity rises.", "No"], ["Silo temperature rises sharply at one sensor location while other sensors remain stable, indicating localized heating.", "Yes"]]}};
+let answers={}, current=1, started=false, submitted=false;
+const labels={
+activity1:{type:"mc",choices:["RB","ML","AI"]},
+activity2:{type:"mc",choices:["A","B","C"]},
+activity3:{type:"mc",choices:["A","B","C","D","E","F"]},
+activity6:{type:"mc",choices:["C","R"]},
+activity7:{type:"mc",choices:["R","TSF"]},
+activity8:{type:"mc",choices:["Clustering","Classification"]},
+activity9:{type:"mc",choices:["Yes","No"]}
+};
+const order=["activity1","activity2","activity3","activity4","activity5","activity6","activity7","activity8","activity9"];
+
+function begin(){
+ const n=document.getElementById("studentName").value.trim(), r=document.getElementById("rollNo").value.trim();
+ if(!n||!r){alert("Please enter Student Name and Roll / PRN.");return}
+ started=true;
+ document.getElementById("studentLabel").textContent=n+" | Roll/PRN: "+r;
+ document.getElementById("start").classList.add("hide");
+ document.getElementById("work").classList.remove("hide");
+ renderAll();showActivity(1);updateProgress();
+}
+function renderAll(){
+ const tabs=document.getElementById("tabs"), cont=document.getElementById("activityContainer");
+ tabs.innerHTML="";cont.innerHTML="";
+ order.forEach((id,idx)=>{
+   const b=document.createElement("button");b.className="tab";b.textContent="Activity "+(idx+1);b.onclick=()=>showActivity(idx+1);b.id="tab"+(idx+1);tabs.appendChild(b);
+   const sec=document.createElement("section");sec.className="activity card";sec.id="act"+(idx+1);
+   sec.innerHTML=buildActivity(id,idx+1);cont.appendChild(sec);
+ });
+}
+function buildActivity(id,num){
+ const d=DATA[id], inst=`<div class="inst">${esc(d.instructions)}</div>`;
+ if(d.questions){
+   return `<h2>${esc(d.title)}</h2>${inst}<div class="progress"><i id="bar${num}"></i></div>`+
+    d.questions.map((q,i)=>questionHTML(id,i,q,labels[id])).join("");
+ }
+ if(id==="activity4"){
+   return `<h2>${esc(d.title)}</h2>${inst}`+
+    d.text_questions.map((q,i)=>`<div class="qrow"><div class="qnum">Q${i+1}</div><div class="scenario">${esc(q[0])}</div>
+    <label><b>Features (X)</b><textarea id="${id}_${i}_x" rows="2" placeholder="Enter input features..."></textarea></label>
+    <label><b>Label (Y)</b><textarea id="${id}_${i}_y" rows="2" placeholder="Enter output label..."></textarea></label></div>`).join("");
+ }
+ if(id==="activity5"){
+   return `<h2>${esc(d.title)}</h2>${inst}
+   <p><b>Scenario:</b> A factory monitors a gear box using IoT sensors. The model classifies Healthy or Bearing Fault.</p>
+   <table class="matrix"><tr><th></th><th>Predicted Healthy</th><th>Predicted Fault</th></tr>
+   <tr><th>Actual Healthy</th><td>170</td><td>10</td></tr><tr><th>Actual Fault</th><td>5</td><td>15</td></tr></table>
+   <div class="qrow"><b>Q1. True Positive (TP)</b><input type="text" id="a5_tp" placeholder="Enter value"></div>
+   <div class="qrow"><b>Q2. True Negative (TN)</b><input type="text" id="a5_tn" placeholder="Enter value"></div>
+   <div class="qrow"><b>Q3. False Positive (FP)</b><input type="text" id="a5_fp" placeholder="Enter value"></div>
+   <div class="qrow"><b>Q4. False Negative (FN)</b><input type="text" id="a5_fn" placeholder="Enter value"></div>
+   <div class="qrow"><b>Q5. Accuracy (%)</b><input type="text" id="a5_acc" placeholder="Enter percentage"></div>
+   <div class="qrow"><b>Q6. Why can high accuracy still be unsafe in fault detection?</b><textarea id="a5_reason" rows="3" placeholder="Write your engineering reasoning..."></textarea></div>`;
+ }
+}
+function questionHTML(id,i,q,meta){
+ return `<div class="qrow"><div class="qnum">Q${i+1}</div><div class="scenario">${esc(q[0])}</div><div class="opts">`+
+ meta.choices.map(c=>`<label class="option"><input type="radio" name="${id}_${i}" value="${esc(c)}" onchange="setAns('${id}',${i},this.value)">${esc(c)}</label>`).join("")+
+ `</div></div>`;
+}
+function setAns(id,i,v){if(!answers[id])answers[id]={};answers[id][i]=v;updateProgress();}
+function showActivity(n){
+ current=n;
+ document.querySelectorAll(".activity").forEach(x=>x.classList.remove("active"));
+ document.getElementById("act"+n).classList.add("active");
+ document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+ document.getElementById("tab"+n).classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+function updateProgress(){
+ let total=0,done=0;
+ order.forEach((id,idx)=>{
+   const d=DATA[id];
+   if(d.questions){
+     total+=d.questions.length;
+     for(let i=0;i<d.questions.length;i++) if(answers[id]&&answers[id][i]) done++;
+     const b=document.getElementById("bar"+(idx+1));if(b)b.style.width=(d.questions.length?((answers[id]?Object.keys(answers[id]).length:0)/d.questions.length*100):0)+"%";
+   }else if(id==="activity4"){
+     total+=d.text_questions.length;
+     for(let i=0;i<d.text_questions.length;i++){
+       const x=document.getElementById(id+"_"+i+"_x"), y=document.getElementById(id+"_"+i+"_y");
+       if(x&&y&&(x.value.trim()||y.value.trim()))done++;
+     }
+   }else if(id==="activity5"){
+     total+=6;["tp","tn","fp","fn","acc","reason"].forEach(k=>{const el=document.getElementById("a5_"+k);if(el&&el.value.trim())done++;});
+   }
+ });
+ document.getElementById("overallProgress").textContent=Math.round(done/total*100)+"%";
+}
+document.addEventListener("input",updateProgress);
+function saveProgress(){
+ localStorage.setItem("aiml_activity_progress",JSON.stringify({name:studentName.value,roll:rollNo.value,answers}));
+ alert("Progress saved in this browser.");
+}
+function submitAll(){
+ if(!confirm("Submit Activities 1–9 now? You can no longer edit this submission."))return;
+ submitted=true;
+ // Collect free text
+ answers.activity4={};
+ DATA.activity4.text_questions.forEach((q,i)=>{
+   answers.activity4[i]={x:document.getElementById("activity4_"+i+"_x").value.trim(),y:document.getElementById("activity4_"+i+"_y").value.trim()};
+ });
+ answers.activity5={
+   tp:a5_tp.value.trim(),tn:a5_tn.value.trim(),fp:a5_fp.value.trim(),fn:a5_fn.value.trim(),acc:a5_acc.value.trim(),reason:a5_reason.value.trim()
+ };
+ const scores=calculateScores();
+ document.getElementById("work").classList.add("hide");
+ document.getElementById("result").classList.remove("hide");
+ document.getElementById("resultWho").innerHTML="<b>"+esc(studentName.value.trim())+"</b> | Roll/PRN: <b>"+esc(rollNo.value.trim())+"</b>";
+ document.getElementById("score").textContent=scores.total+"/"+scores.max+" objective marks ("+((scores.total/scores.max)*100).toFixed(1)+"%)";
+ document.getElementById("resultMsg").textContent="Submission recorded in this browser. Please show/save this result for your teacher.";
+ let box="";
+ scores.by.forEach((s,i)=>box+=`<div class="resultbox"><b>Activity ${i+1}</b>: ${s.correct}/${s.max} objective marks${s.note?" — "+s.note:""}</div>`);
+ document.getElementById("activityScores").innerHTML=box;
+}
+function calculateScores(){
+ let total=0,max=0,by=[];
+ order.forEach((id,idx)=>{
+   if(labels[id]){
+     let c=0;DATA[id].questions.forEach((q,i)=>{if(answers[id]&&answers[id][i]===q[1])c++});
+     total+=c;max+=DATA[id].questions.length;by.push({correct:c,max:DATA[id].questions.length});
+   } else if(id==="activity5"){
+     let c=0; if(answers.activity5.tp==="15")c++;if(answers.activity5.tn==="170")c++;if(answers.activity5.fp==="10")c++;if(answers.activity5.fn==="5")c++;
+     let a=parseFloat(answers.activity5.acc);if(!isNaN(a)&&Math.abs(a-92.5)<0.11)c++;
+     // Reasoning is manually reviewed.
+     total+=c;max+=5;by.push({correct:c,max:5,note:"Q6 reasoning requires teacher review"});
+   } else if(id==="activity4"){
+     by.push({correct:0,max:0,note:"Free-text Features/Labels require teacher review"});
+   }
+ });
+ return {total,max,by};
+}
+function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+</script>
+</body>
+</html>
