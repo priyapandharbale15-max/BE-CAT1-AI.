@@ -26,8 +26,8 @@ footer{text-align:center;color:#667085;font-size:13px;padding:20px}
 </head>
 <body>
 <div class="header">
-<h1>Sanjay Ghodawat Institute</h1>
-<p>AI, ML & Generative AI — Student Activity Portal</p>
+<h1>Sanjay Ghodawat Institute Deparment of CSE</h1>
+<p>AI CAT1 — Student Activity Portal</p>
 <p style="font-size:14px;margin-top:5px">Activities 1–7 • Interactive Online Submission</p>
 </div>
 
@@ -42,25 +42,29 @@ footer{text-align:center;color:#667085;font-size:13px;padding:20px}
 
 <section id="work" class="hide">
 <div class="topbar card">
-<div><b id="studentLabel"></b><div class="small">Complete all seven activities and click Submit.</div></div>
+<div><b id="studentLabel"></b><div class="small">Complete all seven activities, then click <b>FINISH & SHOW FINAL SCORE</b>.</div></div>
 <div><span id="overallProgress">0%</span> complete</div>
 </div>
 
+<div class="card" style="text-align:center;position:sticky;top:48px;z-index:4">
+<button class="success" style="font-size:18px;padding:14px 28px" onclick="submitAll()">✓ FINISH & SHOW FINAL SCORE</button>
+<div class="small" style="margin-top:6px">Click this after completing all activities.</div>
+</div>
 <div class="tabs" id="tabs"></div>
 <div id="activityContainer"></div>
 
 <div class="card actions">
-<button class="primary" onclick="submitAll()">Submit All Activities</button>
+<button class="success" style="font-size:17px" onclick="submitAll()">✓ FINISH & SHOW FINAL SCORE</button>
 <button class="secondary" onclick="saveProgress()">Save Progress in Browser</button>
 <button class="secondary" onclick="window.print()">Print / Save</button>
 </div>
 </section>
 
 <section id="result" class="card hide">
-<h2 style="text-align:center">Activity Submission Result</h2>
+<h2 style="text-align:center">🎉 FINAL SCORE</h2>
 <p id="resultWho" style="text-align:center"></p>
-<div class="score" id="score"></div>
-<p style="text-align:center" id="resultMsg"></p>
+<p style="text-align:center;font-weight:700;font-size:18px;margin-bottom:4px">YOUR FINAL SCORE</p><div class="score" id="score"></div>
+<p style="text-align:center;font-size:17px;font-weight:600" id="resultMsg"></p>
 <div id="activityScores"></div>
 <div class="resultbox"><b>Important:</b> Activities containing free-text responses (especially Activity 4) are recorded for student submission. The teacher can review those responses manually.</div>
 <div style="text-align:center"><button class="primary" onclick="window.print()">Print / Save Result</button> <button class="secondary" onclick="location.reload()">New Submission</button></div>
@@ -180,7 +184,7 @@ function submitAll(){
  document.getElementById("result").classList.remove("hide");
  document.getElementById("resultWho").innerHTML="<b>"+esc(studentName.value.trim())+"</b> | Roll/PRN: <b>"+esc(rollNo.value.trim())+"</b>";
  document.getElementById("score").textContent=scores.total+"/"+scores.max+" objective marks ("+((scores.total/scores.max)*100).toFixed(1)+"%)";
- document.getElementById("resultMsg").textContent="Submission recorded in this browser. Please show/save this result for your teacher.";
+ document.getElementById("resultMsg").textContent="Your final score is shown above. Please save or print this result for your teacher.";
  let box="";
  scores.by.forEach((s,i)=>box+=`<div class="resultbox"><b>Activity ${i+1}</b>: ${s.correct}/${s.max} objective marks${s.note?" — "+s.note:""}</div>`);
  document.getElementById("activityScores").innerHTML=box;
